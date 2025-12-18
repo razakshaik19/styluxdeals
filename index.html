@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>STYLUX DEALS | Premium Affiliate Deals</title>
+  <title>STYLUX DEALS - Premium Online Deals</title>
 
   <!-- Google Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -13,1297 +13,124 @@
     rel="stylesheet"
   />
 
-  <style>
-  :root {
-    --bg-main: #020617;
-    --bg-card: rgba(15, 23, 42, 0.95);
-    --bg-soft: rgba(15, 23, 42, 0.75);
-    --accent: #6366f1;
-    --accent-soft: rgba(99, 102, 241, 0.45);
-    --accent-2: #ec4899;
-    --text-main: #e5e7eb;
-    --text-muted: #9ca3af;
-    --border-soft: rgba(148, 163, 184, 0.35);
-    --radius-lg: 1.5rem;
-    --radius-md: 1rem;
-    --shadow-soft: 0 18px 45px rgba(15, 23, 42, 0.9);
-    --transition-fast: 0.18s ease-out;
-  }
-
-  * {
-    box-sizing: border-box;
-  }
-
-  body {
-    margin: 0;
-    font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-    background: radial-gradient(circle at top left, #1f2937 0, #020617 55%);
-    color: var(--text-main);
-    min-height: 100vh;
-    -webkit-font-smoothing: antialiased;
-  }
-
-  body.no-scroll {
-    overflow: hidden;
-  }
-
-  img {
-    max-width: 100%;
-    display: block;
-  }
-
-  a {
-    color: inherit;
-    text-decoration: none;
-  }
-
-  button {
-    font-family: inherit;
-  }
-
-  .hidden {
-    display: none !important;
-  }
-
-  /* Layout */
-  .page-wrap {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 1.25rem 3rem;
-  }
-
-  /* Navbar */
-  .navbar {
-    position: sticky;
-    top: 0;
-    z-index: 50;
-    backdrop-filter: blur(18px);
-    background: linear-gradient(
-      to right,
-      rgba(15, 23, 42, 0.95),
-      rgba(17, 24, 39, 0.92),
-      rgba(15, 23, 42, 0.95)
-    );
-    border-bottom: 1px solid rgba(55, 65, 81, 0.8);
-  }
-
-  .navbar-inner {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0.75rem 1.25rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 1.5rem;
-  }
-
-  .brand {
-    display: flex;
-    align-items: center;
-    gap: 0.7rem;
-  }
-
-  .brand-logo {
-    width: 38px;
-    height: 38px;
-    border-radius: 999px;
-    border: 1px solid rgba(148, 163, 184, 0.5);
-    background: radial-gradient(circle at 25% 0, #4f46e5, #0f172a 60%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    box-shadow: 0 0 0 1px rgba(15, 23, 42, 0.9), 0 16px 45px rgba(15, 23, 42, 0.9);
-  }
-
-  .brand-logo img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
-  .brand-fallback {
-    font-size: 0.9rem;
-    font-weight: 600;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: #e5e7eb;
-  }
-
-  .brand-text {
-    display: flex;
-    flex-direction: column;
-    gap: 0.1rem;
-  }
-
-  .brand-name {
-    font-weight: 700;
-    letter-spacing: 0.12em;
-    font-size: 0.9rem;
-    text-transform: uppercase;
-  }
-
-  .brand-sub {
-    font-size: 0.7rem;
-    text-transform: uppercase;
-    letter-spacing: 0.22em;
-    color: var(--text-muted);
-  }
-
-  .nav-links {
-    display: flex;
-    align-items: center;
-    gap: 1.25rem;
-    font-size: 0.8rem;
-    text-transform: uppercase;
-    letter-spacing: 0.16em;
-    color: var(--text-muted);
-  }
-
-  .nav-links a {
-    position: relative;
-    padding-bottom: 0.15rem;
-  }
-
-  .nav-links a::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -0.15rem;
-    width: 0;
-    height: 2px;
-    background: linear-gradient(to right, var(--accent), var(--accent-2));
-    border-radius: 999px;
-    transition: width var(--transition-fast);
-  }
-
-  .nav-links a:hover {
-    color: #e5e7eb;
-  }
-
-  .nav-links a:hover::after {
-    width: 100%;
-  }
-
-  .nav-cta {
-    padding: 0.45rem 0.95rem;
-    border-radius: 999px;
-    font-size: 0.75rem;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    border: 1px solid rgba(148, 163, 184, 0.6);
-    background: radial-gradient(circle at top left, rgba(79, 70, 229, 0.55), rgba(15, 23, 42, 0.65));
-    color: #e5e7eb;
-    display: inline-flex;
-    align-items: center;
-    gap: 0.45rem;
-    cursor: pointer;
-    transition: background var(--transition-fast), transform var(--transition-fast),
-      box-shadow var(--transition-fast), border-color var(--transition-fast);
-    box-shadow: 0 0 0 1px rgba(15, 23, 42, 0.8), 0 12px 30px rgba(15, 23, 42, 0.8);
-    white-space: nowrap;
-  }
-
-  .nav-cta span {
-    font-size: 0.8rem;
-  }
-
-  .nav-cta-dot {
-    width: 6px;
-    height: 6px;
-    border-radius: 999px;
-    background: #22c55e;
-    box-shadow: 0 0 12px rgba(34, 197, 94, 0.9);
-  }
-
-  .nav-cta:hover {
-    transform: translateY(-1px);
-    border-color: rgba(248, 250, 252, 0.9);
-    box-shadow: 0 18px 40px rgba(15, 23, 42, 0.95);
-  }
-
-  /* Hero */
-  .hero {
-    padding: 2.5rem 0 2rem;
-  }
-
-  .hero-inner {
-    display: grid;
-    grid-template-columns: minmax(0, 1.25fr) minmax(0, 1.05fr);
-    gap: 2.5rem;
-    align-items: center;
-  }
-
-  .hero-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.45rem;
-    padding: 0.3rem 0.75rem 0.3rem 0.4rem;
-    border-radius: 999px;
-    border: 1px solid rgba(156, 163, 175, 0.7);
-    background: radial-gradient(circle at top left, rgba(59, 130, 246, 0.2), rgba(15, 23, 42, 0.9));
-    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.9);
-    margin-bottom: 0.9rem;
-  }
-
-  .hero-badge-pill {
-    padding: 0.22rem 0.6rem;
-    border-radius: 999px;
-    font-size: 0.65rem;
-    letter-spacing: 0.16em;
-    text-transform: uppercase;
-    background: rgba(15, 23, 42, 0.96);
-    border: 1px solid rgba(148, 163, 184, 0.9);
-    color: #e5e7eb;
-  }
-
-  .hero-badge-text {
-    font-size: 0.7rem;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: var(--text-muted);
-  }
-
-  .hero-title {
-    font-size: clamp(2.2rem, 3.4vw, 3rem);
-    line-height: 1.1;
-    margin: 0 0 0.6rem;
-    letter-spacing: 0.16em;
-    text-transform: uppercase;
-  }
-
-  .hero-title span {
-    background: linear-gradient(to right, #e5e7eb, #a5b4fc, #f9a8d4);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-  }
-
-  .hero-tagline {
-    font-size: 0.95rem;
-    color: var(--text-muted);
-    max-width: 480px;
-    margin-bottom: 1.4rem;
-  }
-
-  .hero-tagline strong {
-    color: #e5e7eb;
-  }
-
-  .hero-actions {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 0.8rem;
-    margin-bottom: 1rem;
-  }
-
-  .primary-btn,
-  .secondary-btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.4rem;
-    padding: 0.7rem 1.2rem;
-    border-radius: 999px;
-    border: 1px solid transparent;
-    font-size: 0.8rem;
-    font-weight: 500;
-    letter-spacing: 0.16em;
-    text-transform: uppercase;
-    cursor: pointer;
-    transition: background var(--transition-fast), transform var(--transition-fast),
-      box-shadow var(--transition-fast), border-color var(--transition-fast), color 0.18s ease-out;
-    white-space: nowrap;
-  }
-
-  .primary-btn {
-    background: linear-gradient(135deg, #4f46e5, #6366f1, #ec4899);
-    color: #f9fafb;
-    box-shadow: 0 16px 40px rgba(15, 23, 42, 0.95);
-  }
-
-  .primary-btn:hover {
-    transform: translateY(-1px);
-    box-shadow: 0 18px 46px rgba(15, 23, 42, 0.98);
-    filter: brightness(1.08);
-  }
-
-  .secondary-btn {
-    background: radial-gradient(circle at top left, rgba(55, 65, 81, 0.9), rgba(15, 23, 42, 0.96));
-    border-color: rgba(148, 163, 184, 0.75);
-    color: #e5e7eb;
-    box-shadow: 0 12px 30px rgba(15, 23, 42, 0.92);
-  }
-
-  .secondary-btn:hover {
-    transform: translateY(-1px);
-    border-color: rgba(248, 250, 252, 0.9);
-    background: radial-gradient(circle at top left, rgba(79, 70, 229, 0.8), rgba(15, 23, 42, 0.98));
-  }
-
-  .hero-subtext {
-    font-size: 0.75rem;
-    color: var(--text-muted);
-    max-width: 420px;
-  }
-
-  .hero-subtext strong {
-    color: #e5e7eb;
-  }
-
-  .hero-subtext span {
-    color: #a5b4fc;
-  }
-
-  /* Hero Right */
-  .hero-right {
-    position: relative;
-    display: flex;
-    justify-content: flex-end;
-  }
-
-  .hero-card {
-    width: 100%;
-    max-width: 360px;
-    border-radius: var(--radius-lg);
-    background: radial-gradient(circle at top left, #111827 0, #020617 60%);
-    border: 1px solid rgba(148, 163, 184, 0.35);
-    box-shadow: var(--shadow-soft);
-    padding: 1.1rem 1.1rem 1rem;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .hero-card-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 0.8rem;
-    gap: 1rem;
-  }
-
-  .hero-chip {
-    padding: 0.22rem 0.7rem;
-    border-radius: 999px;
-    font-size: 0.65rem;
-    text-transform: uppercase;
-    letter-spacing: 0.18em;
-    background: rgba(15, 23, 42, 0.96);
-    border: 1px solid rgba(148, 163, 184, 0.9);
-    color: var(--text-muted);
-  }
-
-  .hero-fade {
-    font-size: 0.7rem;
-    color: var(--text-muted);
-    text-transform: uppercase;
-    letter-spacing: 0.18em;
-  }
-
-  .hero-highlight {
-    display: flex;
-    flex-direction: column;
-    gap: 0.1rem;
-    margin-bottom: 0.7rem;
-  }
-
-  .hero-highlight-main {
-    font-size: 0.9rem;
-    font-weight: 500;
-  }
-
-  .hero-highlight-sub {
-    font-size: 0.75rem;
-    color: var(--text-muted);
-  }
-
-  .hero-metrics {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.6rem;
-    margin-bottom: 0.9rem;
-  }
-
-  .hero-metric {
-    padding: 0.45rem 0.6rem;
-    border-radius: 0.9rem;
-    border: 1px solid rgba(55, 65, 81, 0.9);
-    background: rgba(15, 23, 42, 0.96);
-    font-size: 0.7rem;
-    display: flex;
-    flex-direction: column;
-    gap: 0.1rem;
-    min-width: 90px;
-  }
-
-  .hero-metric-label {
-    color: var(--text-muted);
-    text-transform: uppercase;
-    letter-spacing: 0.14em;
-    font-size: 0.65rem;
-  }
-
-  .hero-metric-value {
-    font-size: 0.8rem;
-    color: #e5e7eb;
-  }
-
-  .hero-metric-pill {
-    font-size: 0.65rem;
-    color: #22c55e;
-  }
-
-  .hero-footer-note {
-    font-size: 0.68rem;
-    color: var(--text-muted);
-    display: flex;
-    justify-content: space-between;
-    gap: 0.6rem;
-  }
-
-  .hero-footer-note span {
-    color: #a5b4fc;
-  }
-
-  /* Section */
-  .section {
-    margin-top: 2.5rem;
-  }
-
-  .section-header {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: flex-end;
-    gap: 1rem;
-    margin-bottom: 1.4rem;
-  }
-
-  .section-title {
-    font-size: 1.2rem;
-    text-transform: uppercase;
-    letter-spacing: 0.16em;
-  }
-
-  .section-sub {
-    font-size: 0.78rem;
-    color: var(--text-muted);
-    max-width: 420px;
-  }
-
-  .search-shell {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.8rem;
-    align-items: center;
-  }
-
-  .search-input-wrap {
-    flex: 1 1 220px;
-    position: relative;
-  }
-
-  .search-input {
-    width: 100%;
-    padding: 0.7rem 0.9rem 0.7rem 2.1rem;
-    border-radius: 999px;
-    border: 1px solid rgba(55, 65, 81, 0.9);
-    background: linear-gradient(to right, rgba(15, 23, 42, 0.97), rgba(15, 23, 42, 0.87));
-    color: #e5e7eb;
-    font-size: 0.8rem;
-    outline: none;
-    box-shadow: 0 14px 32px rgba(15, 23, 42, 0.92);
-  }
-
-  .search-input::placeholder {
-    color: #6b7280;
-  }
-
-  .search-icon {
-    position: absolute;
-    left: 0.85rem;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 0.8rem;
-    color: #6b7280;
-  }
-
-  .select-input {
-    flex: 0 0 160px;
-    max-width: 200px;
-    padding: 0.62rem 0.9rem;
-    border-radius: 999px;
-    border: 1px solid rgba(55, 65, 81, 0.9);
-    background: linear-gradient(to right, rgba(15, 23, 42, 0.96), rgba(15, 23, 42, 0.9));
-    color: #e5e7eb;
-    font-size: 0.78rem;
-    outline: none;
-    box-shadow: 0 14px 32px rgba(15, 23, 42, 0.92);
-  }
-
-  /* Products */
-  .products-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 1.5rem;
-  }
-
-  .product-card {
-    border-radius: var(--radius-md);
-    background: var(--bg-card);
-    border: 1px solid var(--border-soft);
-    box-shadow: var(--shadow-soft);
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    transition: transform var(--transition-fast), box-shadow var(--transition-fast),
-      border-color var(--transition-fast), background 0.2s ease-out;
-  }
-
-  .product-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 22px 60px rgba(15, 23, 42, 0.98);
-    border-color: rgba(129, 140, 248, 0.8);
-    background: radial-gradient(circle at top left, rgba(37, 99, 235, 0.2), #020617 58%);
-  }
-
-  .product-image {
-    position: relative;
-    overflow: hidden;
-    border-bottom: 1px solid rgba(31, 41, 55, 0.9);
-  }
-
-  .product-image img {
-    width: 100%;
-    height: 190px;
-    object-fit: cover;
-    transition: transform 0.4s ease-out;
-  }
-
-  .product-card:hover .product-image img {
-    transform: scale(1.04);
-  }
-
-  .product-tag {
-    position: absolute;
-    left: 0.75rem;
-    top: 0.75rem;
-    padding: 0.2rem 0.6rem;
-    border-radius: 999px;
-    font-size: 0.63rem;
-    text-transform: uppercase;
-    letter-spacing: 0.16em;
-    background: rgba(15, 23, 42, 0.9);
-    border: 1px solid rgba(148, 163, 184, 0.85);
-    color: #e5e7eb;
-  }
-
-  .product-body {
-    padding: 0.9rem 0.95rem 1rem;
-    display: flex;
-    flex-direction: column;
-    gap: 0.45rem;
-    flex: 1;
-  }
-
-  .product-body h3 {
-    font-size: 0.95rem;
-    margin: 0;
-  }
-
-  .product-price {
-    font-size: 0.78rem;
-    color: #a5b4fc;
-  }
-
-  .product-desc {
-    font-size: 0.78rem;
-    color: var(--text-muted);
-    flex: 1;
-  }
-
-  .product-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.35rem;
-    margin: 0.2rem 0 0.5rem;
-  }
-
-  .product-tags span {
-    font-size: 0.65rem;
-    padding: 0.18rem 0.55rem;
-    border-radius: 999px;
-    border: 1px solid rgba(55, 65, 81, 0.9);
-    background: rgba(15, 23, 42, 0.96);
-    color: #9ca3af;
-  }
-
-  .view-details-btn {
-    margin-top: 0.1rem;
-    width: 100%;
-    justify-content: center;
-    font-size: 0.72rem;
-  }
-
-  .no-results {
-    margin-top: 1.2rem;
-    font-size: 0.8rem;
-    color: var(--text-muted);
-    text-align: center;
-  }
-
-  /* Social / Community */
-  .social-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-    gap: 1.4rem;
-  }
-
-  .social-card {
-    border-radius: var(--radius-md);
-    border: 1px solid var(--border-soft);
-    padding: 1rem;
-    background: radial-gradient(circle at top left, rgba(37, 99, 235, 0.15), rgba(15, 23, 42, 0.98));
-    box-shadow: var(--shadow-soft);
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-
-  .social-title {
-    font-size: 0.9rem;
-    text-transform: uppercase;
-    letter-spacing: 0.18em;
-  }
-
-  .social-desc {
-    font-size: 0.8rem;
-    color: var(--text-muted);
-  }
-
-  .social-handle {
-    font-size: 0.78rem;
-    color: #a5b4fc;
-  }
-
-  .social-card .primary-btn {
-    width: fit-content;
-    padding-inline: 0.95rem;
-    font-size: 0.75rem;
-  }
-
-  .social-badge {
-    font-size: 0.68rem;
-    color: var(--text-muted);
-    text-transform: uppercase;
-    letter-spacing: 0.18em;
-  }
-
-  .social-card.insta {
-    border-image: linear-gradient(135deg, #f97316, #ec4899, #6366f1) 1;
-  }
-
-  .social-card.yt {
-    border-image: linear-gradient(135deg, #f97373, #ef4444, #7f1d1d) 1;
-  }
-
-  .social-card.tg {
-    border-image: linear-gradient(135deg, #38bdf8, #22c55e, #0f766e) 1;
-  }
-
-  /* Modal */
-  .modal {
-    position: fixed;
-    inset: 0;
-    background: rgba(15, 23, 42, 0.88);
-    backdrop-filter: blur(12px);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 1.5rem;
-    z-index: 80;
-  }
-
-  .modal-content {
-    position: relative;
-    width: 100%;
-    max-width: 960px;
-    max-height: 90vh;
-    border-radius: 1.5rem;
-    border: 1px solid rgba(148, 163, 184, 0.4);
-    background: radial-gradient(circle at top left, #111827 0, #020617 60%);
-    box-shadow: 0 24px 80px rgba(15, 23, 42, 0.98);
-    display: grid;
-    grid-template-columns: minmax(0, 1.15fr) minmax(0, 1.4fr);
-    overflow: hidden;
-  }
-
-  .modal-close {
-    position: absolute;
-    top: 0.7rem;
-    right: 0.75rem;
-    border: none;
-    background: rgba(15, 23, 42, 0.96);
-    color: #9ca3af;
-    width: 26px;
-    height: 26px;
-    border-radius: 999px;
-    font-size: 1.1rem;
-    cursor: pointer;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid rgba(55, 65, 81, 0.9);
-    transition: background var(--transition-fast), color var(--transition-fast), transform var(--transition-fast);
-    z-index: 2;
-  }
-
-  .modal-close:hover {
-    background: #ef4444;
-    color: #f9fafb;
-    transform: translateY(-1px);
-  }
-
-  .modal-left {
-    border-right: 1px solid rgba(31, 41, 55, 0.9);
-    background: radial-gradient(circle at top left, rgba(37, 99, 235, 0.2), #020617 70%);
-    display: flex;
-    align-items: stretch;
-  }
-
-  .modal-image-wrap {
-    padding: 1rem;
-    display: flex;
-    flex-direction: column;
-    gap: 0.7rem;
-    width: 100%;
-  }
-
-  .modal-image-main {
-    border-radius: 1.1rem;
-    overflow: hidden;
-    border: 1px solid rgba(31, 41, 55, 0.95);
-    background: #020617;
-  }
-
-  .modal-image-main img {
-    width: 100%;
-    height: 260px;
-    object-fit: cover;
-  }
-
-  .modal-tagline {
-    font-size: 0.7rem;
-    color: var(--text-muted);
-    text-transform: uppercase;
-    letter-spacing: 0.16em;
-  }
-
-  .modal-right {
-    padding: 1.1rem 1.15rem 1.1rem;
-    display: flex;
-    flex-direction: column;
-    gap: 0.55rem;
-    overflow-y: auto;
-  }
-
-  .modal-category {
-    font-size: 0.7rem;
-    text-transform: uppercase;
-    letter-spacing: 0.18em;
-    color: #a5b4fc;
-  }
-
-  .modal-title {
-    font-size: 1.05rem;
-    margin: 0;
-  }
-
-  .modal-price {
-    font-size: 0.86rem;
-    color: #a5b4fc;
-  }
-
-  .modal-desc {
-    font-size: 0.8rem;
-    color: var(--text-muted);
-  }
-
-  .feature-list {
-    margin: 0.3rem 0 0.5rem;
-    padding-left: 1.1rem;
-    font-size: 0.78rem;
-    color: #d1d5db;
-    max-height: 150px;
-    overflow-y: auto;
-    scrollbar-width: thin;
-    scrollbar-color: #4b5563 #020617;
-  }
-
-  .feature-list li + li {
-    margin-top: 0.2rem;
-  }
-
-  .feature-list::-webkit-scrollbar {
-    width: 6px;
-  }
-
-  .feature-list::-webkit-scrollbar-track {
-    background: #020617;
-    border-radius: 999px;
-  }
-
-  .feature-list::-webkit-scrollbar-thumb {
-    background: #4b5563;
-    border-radius: 999px;
-  }
-
-  .buy-label {
-    font-size: 0.7rem;
-    color: var(--text-muted);
-    text-transform: uppercase;
-    letter-spacing: 0.2em;
-    margin-top: 0.3rem;
-  }
-
-  .buy-buttons {
-    margin-top: 0.4rem;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
-    gap: 0.45rem;
-  }
-
-  .store-btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.35rem;
-    padding: 0.5rem 0.7rem;
-    border-radius: 999px;
-    font-size: 0.7rem;
-    font-weight: 500;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    border: 1px solid rgba(55, 65, 81, 0.95);
-    background: rgba(15, 23, 42, 0.96);
-    color: #e5e7eb;
-    cursor: pointer;
-    transition: background var(--transition-fast), transform var(--transition-fast),
-      border-color var(--transition-fast), box-shadow var(--transition-fast);
-    white-space: nowrap;
-    text-align: center;
-  }
-
-  .store-btn:hover {
-    transform: translateY(-1px);
-    box-shadow: 0 14px 38px rgba(15, 23, 42, 0.98);
-  }
-
-  .store-btn.amazon {
-    border-color: rgba(245, 158, 11, 0.85);
-  }
-
-  .store-btn.amazon:hover {
-    background: linear-gradient(135deg, #f59e0b, #fb923c);
-  }
-
-  .store-btn.flipkart {
-    border-color: rgba(37, 99, 235, 0.85);
-  }
-
-  .store-btn.flipkart:hover {
-    background: linear-gradient(135deg, #2563eb, #38bdf8);
-  }
-
-  .store-btn.meesho {
-    border-color: rgba(236, 72, 153, 0.85);
-  }
-
-  .store-btn.meesho:hover {
-    background: linear-gradient(135deg, #ec4899, #f472b6);
-  }
-
-  .store-btn.myntra {
-    border-color: rgba(239, 68, 68, 0.85);
-  }
-
-  .store-btn.myntra:hover {
-    background: linear-gradient(135deg, #f97316, #ec4899, #6366f1);
-  }
-
-  /* Footer */
-  .footer {
-    margin-top: 2.6rem;
-    padding-top: 1.3rem;
-    border-top: 1px solid rgba(31, 41, 55, 0.9);
-    font-size: 0.75rem;
-    color: var(--text-muted);
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 0.6rem;
-  }
-
-  .footer span {
-    color: #a5b4fc;
-  }
-
-  /* Responsive */
-  @media (max-width: 900px) {
-    .hero-inner {
-      grid-template-columns: minmax(0, 1.2fr);
-    }
-
-    .hero-right {
-      order: -1;
-      justify-content: flex-start;
-      margin-bottom: 1.5rem;
-    }
-
-    .hero-card {
-      max-width: 100%;
-    }
-
-    .modal-content {
-      grid-template-columns: minmax(0, 1fr);
-    }
-
-    .modal-left {
-      display: none;
-    }
-  }
-
-  @media (max-width: 720px) {
-    .navbar-inner {
-      flex-wrap: wrap;
-      gap: 0.75rem;
-    }
-
-    .nav-links {
-      display: none;
-    }
-
-    .nav-cta {
-      margin-left: auto;
-    }
-
-    .hero {
-      padding-top: 1.8rem;
-    }
-
-    .hero-title {
-      font-size: 2rem;
-      letter-spacing: 0.12em;
-    }
-
-    .hero-actions {
-      flex-direction: column;
-      align-items: stretch;
-    }
-
-    .primary-btn,
-    .secondary-btn {
-      width: 100%;
-    }
-
-    .section-header {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-
-    .search-shell {
-      width: 100%;
-      flex-direction: column;
-      align-items: stretch;
-    }
-
-    .select-input {
-      width: 100%;
-      max-width: none;
-    }
-
-    .products-grid {
-      grid-template-columns: 1fr;
-    }
-
-    .social-card .primary-btn {
-      width: 100%;
-      justify-content: center;
-    }
-
-    .modal {
-      padding: 1rem;
-    }
-
-    .modal-content {
-      border-radius: 1.1rem;
-      max-height: 95vh;
-    }
-
-    .buy-buttons {
-      grid-template-columns: 1fr 1fr;
-    }
-  }
-
-  @media (max-width: 480px) {
-    .page-wrap {
-      padding-inline: 1rem;
-    }
-
-    .hero-title {
-      font-size: 1.7rem;
-    }
-
-    .product-image img {
-      height: 180px;
-    }
-
-    .hero-card {
-      padding: 0.9rem;
-    }
-
-    .modal {
-      padding: 0.8rem;
-    }
-
-    .modal-content {
-      border-radius: 1rem;
-    }
-
-    .buy-buttons {
-      grid-template-columns: 1fr;
-    }
-  }
-</style>
+  <!-- External CSS -->
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
+  <!-- HEADER / NAVBAR -->
   <header class="navbar">
     <div class="navbar-inner">
       <div class="brand">
         <div class="brand-logo">
-          <!-- Yaha apna logo lagao: src ko apne logo file se replace karo -->
+          <!-- Yaha apna logo image laga sakte ho -->
           <!-- Example: <img src="logo.png" alt="STYLUX DEALS logo"> -->
           <span class="brand-fallback">SD</span>
         </div>
         <div class="brand-text">
           <div class="brand-name">STYLUX DEALS</div>
-          <div class="brand-sub">Deals • Style • Savings</div>
+          <div class="brand-sub">Premium Online Deals</div>
         </div>
       </div>
 
-      <nav class="nav-links">
-        <a href="#home">Home</a>
-        <a href="#deals">Deals</a>
-        <a href="#join-community">Community</a>
-      </nav>
-
-      <a href="#join-community" class="nav-cta">
-        <div class="nav-cta-dot"></div>
+      <a href="#join" class="nav-cta">
+        <span class="nav-cta-dot"></span>
         <span>Join Insta • YouTube • Telegram</span>
       </a>
     </div>
   </header>
 
   <main class="page-wrap">
-    <!-- Hero -->
-    <section class="hero" id="home">
-      <div class="hero-inner">
-        <div class="hero-left">
-          <div class="hero-badge">
-            <div class="hero-badge-pill">STYLUX DEALS</div>
-            <div class="hero-badge-text">Daily Hand‑Picked Online Deals</div>
-          </div>
-
-          <h1 class="hero-title">
-            Premium <span>Deals &amp; Offers</span><br />from Top Indian Stores
-          </h1>
-
-          <p class="hero-tagline">
-            Amazon, Flipkart, Meesho, Myntra ke <strong>best deals</strong> ek hi jagah.
-            Aap sirf <strong>search</strong> karo, humne already
-            <strong>price &amp; quality filter</strong> kar diya hai.
+    <!-- HERO + SEARCH -->
+    <section class="hero" id="top">
+      <div class="hero-main">
+        <div class="hero-text">
+          <h1 class="hero-title">STYLUX DEALS</h1>
+          <p class="hero-subtitle">
+            Amazon, Flipkart, Meesho, Myntra ke best deals ek jagah.  
+            Search karo, product khol ke apna favourite store choose karo.
           </p>
 
-          <div class="hero-actions">
-            <a href="#deals" class="primary-btn">
-              Explore Latest Deals
-            </a>
-            <a href="#join-community" class="secondary-btn">
-              Join Insta • YouTube • Telegram
-            </a>
+          <!-- Search + Category -->
+          <div class="search-area">
+            <div class="search-input-wrap">
+              <span class="search-icon">🔍</span>
+              <input
+                id="searchInput"
+                type="text"
+                class="search-input"
+                placeholder="Search product, category, brand… (earbuds, saree, sneakers)"
+              />
+            </div>
+
+            <select id="categoryFilter" class="select-input">
+              <!-- JS se options aayenge -->
+            </select>
           </div>
 
-          <p class="hero-subtext">
-            <strong>Fast Alerts:</strong> Instagram <span>@styluxdeals</span> pe daily reels,
-            YouTube &amp; Telegram pe detailed deal breakdowns.
-          </p>
-        </div>
-
-        <div class="hero-right">
-          <div class="hero-card">
-            <div class="hero-card-header">
-              <div class="hero-chip">Live Deal Snapshot</div>
-              <div class="hero-fade">Stylux Score</div>
-            </div>
-
-            <div class="hero-highlight">
-              <div class="hero-highlight-main">Smart Shoppers’ Shortcut</div>
-              <div class="hero-highlight-sub">
-                1 page › multiple stores › curated premium products.
-              </div>
-            </div>
-
-            <div class="hero-metrics">
-              <div class="hero-metric">
-                <div class="hero-metric-label">Platforms</div>
-                <div class="hero-metric-value">Amazon • Flipkart • Meesho • Myntra</div>
-                <div class="hero-metric-pill">All in one place</div>
-              </div>
-              <div class="hero-metric">
-                <div class="hero-metric-label">Community</div>
-                <div class="hero-metric-value">@styluxdeals</div>
-                <div class="hero-metric-pill">Insta • YouTube • Telegram</div>
-              </div>
-            </div>
-
-            <div class="hero-footer-note">
-              <div>Search your wish‑list, open product, then pick your store.</div>
-              <div><span>STYLUX DEALS</span> • Premium Affiliate Hub</div>
-            </div>
+          <!-- Social strip -->
+          <div class="social-strip" id="join">
+            <a
+              href="https://instagram.com/styluxdeals"
+              target="_blank"
+              rel="noopener"
+              class="social-pill insta"
+            >
+              Join Insta • @styluxdeals
+            </a>
+            <a
+              href="https://youtube.com/@styluxdeals"
+              target="_blank"
+              rel="noopener"
+              class="social-pill yt"
+            >
+              Join YouTube
+            </a>
+            <a
+              href="https://t.me/styluxdeals"
+              target="_blank"
+              rel="noopener"
+              class="social-pill tg"
+            >
+              Join Telegram
+            </a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Search & Deals -->
+    <!-- PRODUCTS -->
     <section class="section" id="deals">
       <div class="section-header">
-        <div>
-          <div class="section-title">Browse Stylux Deals</div>
-          <div class="section-sub">
-            Search jo chahe: product name, category (earbuds, shoes, fashion…).
-            Result turant filter ho jayega — Amazon, Flipkart, Meesho, Myntra links ek hi jagah.
-          </div>
-        </div>
-
-        <div class="search-shell">
-          <div class="search-input-wrap">
-            <span class="search-icon">🔍</span>
-            <input
-              id="searchInput"
-              class="search-input"
-              type="text"
-              placeholder="Search product, category, brand… (e.g. earbuds, saree, sneakers)"
-            />
-          </div>
-
-          <select id="categoryFilter" class="select-input">
-            <!-- JS se dynamic options aayenge -->
-          </select>
-        </div>
+        <h2 class="section-title">All Deals</h2>
       </div>
 
-      <div class="products-grid" id="productsGrid">
-        <!-- JS se product cards render honge -->
+      <div id="productsGrid" class="products-grid">
+        <!-- JS se cards aayenge -->
       </div>
       <p id="noResults" class="no-results hidden">
         Koi matching product nahi mila. Keyword ya category change karke try karo.
       </p>
     </section>
 
-    <!-- Social / Community -->
-    <section class="section" id="join-community">
-      <div class="section-header">
-        <div>
-          <div class="section-title">Join Stylux Community</div>
-          <div class="section-sub">
-            <strong>Join Insta, Join YouTube, Join Telegram</strong> — sab jagah pe @styluxdeals.
-            Reels, shorts, full videos aur fastest Telegram alerts se
-            <strong>deal miss hone ka chance zero</strong>.
-          </div>
-        </div>
-      </div>
-
-      <div class="social-grid">
-        <div class="social-card insta">
-          <div class="social-badge">Join Insta</div>
-          <h3 class="social-title">Instagram • @styluxdeals</h3>
-          <p class="social-desc">
-            Daily reels, premium product showcases, lightning deals &amp; exclusive coupon alerts.
-          </p>
-          <a
-            href="https://instagram.com/styluxdeals"
-            target="_blank"
-            rel="noopener"
-            class="primary-btn"
-          >
-            Join Instagram
-          </a>
-          <div class="social-handle">@styluxdeals</div>
-        </div>
-
-        <div class="social-card yt">
-          <div class="social-badge">Join YouTube</div>
-          <h3 class="social-title">YouTube • Stylux Deals</h3>
-          <p class="social-desc">
-            In‑depth deal breakdowns, top 10 lists, comparisons, shopping hacks — sab ek channel pe.
-          </p>
-          <a
-            href="https://youtube.com/@styluxdeals"
-            target="_blank"
-            rel="noopener"
-            class="primary-btn"
-          >
-            Join YouTube
-          </a>
-          <div class="social-handle">youtube.com/@styluxdeals</div>
-        </div>
-
-        <div class="social-card tg">
-          <div class="social-badge">Join Telegram</div>
-          <h3 class="social-title">Telegram • Stylux Deals</h3>
-          <p class="social-desc">
-            Sabse fast deal alerts, price drops, hidden offers. Phone pe direct notification.
-          </p>
-          <a
-            href="https://t.me/styluxdeals"
-            target="_blank"
-            rel="noopener"
-            class="primary-btn"
-          >
-            Join Telegram
-          </a>
-          <div class="social-handle">t.me/styluxdeals</div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Footer -->
+    <!-- FOOTER -->
     <footer class="footer">
-      <div>© <span>STYLUX DEALS</span> • All rights reserved.</div>
-      <div>Follow on Instagram: <span>@styluxdeals</span></div>
+      <span>© STYLUX DEALS</span>
+      <span>@styluxdeals</span>
     </footer>
   </main>
 
-  <!-- Product Modal -->
+  <!-- PRODUCT MODAL -->
   <div id="productModal" class="modal hidden">
     <div class="modal-content">
       <button id="modalClose" class="modal-close" aria-label="Close">&times;</button>
 
-      <div class="modal-left">
-        <div class="modal-image-wrap">
-          <div class="modal-image-main">
-            <img id="modalImage" src="" alt="" />
-          </div>
-          <div class="modal-tagline">
-            Open product → check features → then choose where to buy (Amazon, Flipkart, Meesho, Myntra).
-          </div>
+      <div class="modal-image-area">
+        <div class="modal-image-main">
+          <img id="modalImage" src="" alt="" />
         </div>
       </div>
 
-      <div class="modal-right">
+      <div class="modal-info">
         <p id="modalCategory" class="modal-category">CATEGORY</p>
         <h3 id="modalTitle" class="modal-title">Product Name</h3>
         <p id="modalPrice" class="modal-price">₹ Price Range</p>
@@ -1312,57 +139,33 @@
         </p>
 
         <ul id="modalFeatures" class="feature-list">
-          <!-- Features JS se render honge -->
+          <!-- Features JS se aayenge -->
         </ul>
 
-        <div class="buy-label">Buy with your favourite store</div>
+        <p class="buy-label">Buy on</p>
         <div class="buy-buttons">
-          <a
-            id="amazonLink"
-            href="#"
-            target="_blank"
-            rel="noopener"
-            class="store-btn amazon"
-          >
-            Buy on Amazon
+          <a id="amazonLink" href="#" target="_blank" rel="noopener" class="store-btn amazon">
+            Amazon
           </a>
-          <a
-            id="flipkartLink"
-            href="#"
-            target="_blank"
-            rel="noopener"
-            class="store-btn flipkart"
-          >
-            Buy on Flipkart
+          <a id="flipkartLink" href="#" target="_blank" rel="noopener" class="store-btn flipkart">
+            Flipkart
           </a>
-          <a
-            id="meeshoLink"
-            href="#"
-            target="_blank"
-            rel="noopener"
-            class="store-btn meesho"
-          >
-            Buy on Meesho
+          <a id="meeshoLink" href="#" target="_blank" rel="noopener" class="store-btn meesho">
+            Meesho
           </a>
-          <a
-            id="myntraLink"
-            href="#"
-            target="_blank"
-            rel="noopener"
-            class="store-btn myntra"
-          >
-            Buy on Myntra
+          <a id="myntraLink" href="#" target="_blank" rel="noopener" class="store-btn myntra">
+            Myntra
           </a>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- JavaScript -->
+  <!-- JAVASCRIPT -->
   <script>
-    // === Product Data ===
-    // Yaha apne products add / edit karo.
-    // links.amazon / flipkart / meesho / myntra me apne affiliate links lagao.
+    // ===== PRODUCT DATA =====
+    // Yaha apne products add/edit karo.
+    // links.{store} me apne affiliate links daalna.
     const products = [
       {
         id: "p1",
@@ -1370,17 +173,17 @@
         category: "Electronics",
         price: "₹1,299 – ₹1,499",
         description:
-          "Lightweight Bluetooth earbuds with deep bass, clear mic & active noise cancellation. Perfect for music, calls & gaming.",
+          "Lightweight Bluetooth earbuds with deep bass & clear mic. Music, calls aur gaming sab ke liye perfect.",
         features: [
-          "Up to 30 hours total playtime with charging case",
+          "Up to 30 hours total playtime with case",
           "Active Noise Cancellation + Ambient Mode",
-          "IPX5 sweat & splash resistant — gym & outdoor friendly",
-          "Type‑C fast charging: 10 min charge = up to 120 min play",
-          "Touch controls for play/pause, calls & voice assistant",
+          "IPX5 sweat & splash resistant",
+          "Type‑C fast charging",
+          "Touch controls for music & calls",
         ],
         image:
           "https://images.pexels.com/photos/3769711/pexels-photo-3769711.jpeg?auto=compress&cs=tinysrgb&w=800",
-        tags: ["earbuds", "bluetooth", "wireless", "music", "gaming"],
+        tags: ["earbuds", "bluetooth", "wireless", "music"],
         links: {
           amazon: "#",
           flipkart: "#",
@@ -1390,21 +193,21 @@
       },
       {
         id: "p2",
-        name: "AMOLED Smartwatch with SpO2 & BT Calling",
+        name: "AMOLED Smartwatch with BT Calling",
         category: "Electronics",
         price: "₹1,999 – ₹2,499",
         description:
-          "Big AMOLED display smartwatch with Always‑On Display, call function & 100+ sports modes. Stylish with health tracking.",
+          "Big AMOLED display, Bluetooth calling, SpO2 & heart rate tracking. Daily use ke liye stylish smartwatch.",
         features: [
-          "1.78\" AMOLED display with Always‑On option",
-          "Bluetooth calling with in‑built mic & speaker",
-          "SpO2, heart rate, sleep & stress monitoring",
-          "100+ sports modes with step & calorie tracking",
-          "Multiple watch faces, IP68 water‑resistant",
+          "1.78\" AMOLED display, Always‑On option",
+          "Bluetooth calling (mic + speaker)",
+          "SpO2, heart rate, sleep tracking",
+          "Multiple sports modes",
+          "IP68 water‑resistant",
         ],
         image:
           "https://images.pexels.com/photos/2773942/pexels-photo-2773942.jpeg?auto=compress&cs=tinysrgb&w=800",
-        tags: ["smartwatch", "fitness", "amoled", "health"],
+        tags: ["smartwatch", "fitness", "health"],
         links: {
           amazon: "#",
           flipkart: "#",
@@ -1414,21 +217,21 @@
       },
       {
         id: "p3",
-        name: "Chunky Sneakers for Men (Everyday Street Style)",
+        name: "Chunky Sneakers for Men (Street Style)",
         category: "Fashion",
         price: "₹899 – ₹1,299",
         description:
-          "Comfortable chunky sneakers with premium finish – perfect for college, travel & daily wear.",
+          "Comfortable chunky sneakers, college, travel & daily wear ke liye best. Street style look.",
         features: [
-          "Breathable upper for all‑day comfort",
-          "Cushioned midsole for extra support",
-          "Streetwear‑inspired chunky sole design",
-          "Multiple color options to match your outfits",
-          "Best paired with jeans, joggers & shorts",
+          "Breathable upper",
+          "Cushioned midsole",
+          "Chunky streetwear design",
+          "Multiple color options",
+          "Pairs well with jeans & joggers",
         ],
         image:
           "https://images.pexels.com/photos/2529148/pexels-photo-2529148.jpeg?auto=compress&cs=tinysrgb&w=800",
-        tags: ["sneakers", "shoes", "men", "streetwear"],
+        tags: ["sneakers", "shoes", "men"],
         links: {
           amazon: "#",
           flipkart: "#",
@@ -1438,21 +241,21 @@
       },
       {
         id: "p4",
-        name: "Soft Silk Saree with Rich Pallu (Festive Ready)",
+        name: "Soft Silk Saree with Rich Pallu",
         category: "Fashion",
         price: "₹1,199 – ₹1,799",
         description:
-          "Lightweight soft silk saree with detailed border & rich pallu – perfect for wedding & festive functions.",
+          "Lightweight soft silk saree, wedding & festival ke liye ready look. Matching blouse piece included.",
         features: [
-          "Soft silk feel — comfortable for long wear",
-          "Elegant zari border & beautiful pallu design",
-          "Comes with matching blouse piece",
-          "Great for weddings, festivals, parties",
-          "Multiple colour options available",
+          "Soft silk feel, all‑day comfortable",
+          "Elegant border & rich pallu",
+          "Comes with blouse piece",
+          "Perfect for weddings & functions",
+          "Multiple colour options",
         ],
         image:
           "https://images.pexels.com/photos/1485872/pexels-photo-1485872.jpeg?auto=compress&cs=tinysrgb&w=800",
-        tags: ["saree", "ethnic", "women", "festive"],
+        tags: ["saree", "ethnic", "women"],
         links: {
           amazon: "#",
           flipkart: "#",
@@ -1466,41 +269,17 @@
         category: "Home & Kitchen",
         price: "₹2,299 – ₹2,999",
         description:
-          "High‑power mixer grinder with 3 jars – masala, chutney, smoothies & more. Kitchen ke liye all‑rounder.",
+          "High‑power mixer grinder, chutney, masala & smoothies sab easy. Daily Indian kitchen ke liye.",
         features: [
-          "750W powerful copper motor",
-          "3 stainless steel jars (wet, dry, chutney)",
-          "Overload protection & anti‑slip feet",
-          "Sharp blades for fine grinding & blending",
-          "Ideal for daily Indian cooking",
+          "750W copper motor",
+          "3 stainless steel jars",
+          "Overload protection",
+          "Sharp blades for fine grinding",
+          "Anti‑slip feet",
         ],
         image:
           "https://images.pexels.com/photos/3807336/pexels-photo-3807336.jpeg?auto=compress&cs=tinysrgb&w=800",
-        tags: ["mixer", "kitchen", "appliance", "cooking"],
-        links: {
-          amazon: "#",
-          flipkart: "#",
-          meesho: "#",
-          myntra: "#",
-        },
-      },
-      {
-        id: "p6",
-        name: "LED Strip Lights for Room Aesthetic",
-        category: "Home Decor",
-        price: "₹399 – ₹699",
-        description:
-          "Multi‑color LED strip lights with remote – gaming setup, bedroom, background reels sab ke liye perfect.",
-        features: [
-          "RGB colors with multiple modes & brightness levels",
-          "Remote control & sometimes app support",
-          "Easy stick‑on installation with adhesive back",
-          "Great for room ambience, desk & TV backlight",
-          "Energy‑efficient & long life LEDs",
-        ],
-        image:
-          "https://images.pexels.com/photos/3404200/pexels-photo-3404200.jpeg?auto=compress&cs=tinysrgb&w=800",
-        tags: ["led strip", "lights", "room decor", "gaming"],
+        tags: ["mixer", "kitchen", "appliance"],
         links: {
           amazon: "#",
           flipkart: "#",
@@ -1510,7 +289,7 @@
       },
     ];
 
-    // === DOM Elements ===
+    // ===== DOM ELEMENTS =====
     const productsGrid = document.getElementById("productsGrid");
     const searchInput = document.getElementById("searchInput");
     const categoryFilter = document.getElementById("categoryFilter");
@@ -1529,7 +308,7 @@
     const meeshoLink = document.getElementById("meeshoLink");
     const myntraLink = document.getElementById("myntraLink");
 
-    // === Functions ===
+    // ===== FUNCTIONS =====
     function initCategoryFilter() {
       const categories = Array.from(new Set(products.map((p) => p.category))).sort();
       categoryFilter.innerHTML =
@@ -1546,38 +325,37 @@
       }
       noResults.classList.add("hidden");
 
-      list.forEach((product) => {
+      list.forEach((product, index) => {
         const card = document.createElement("article");
-        card.className = "product-card";
+        card.className = "product-card card-pop";
+        card.dataset.id = product.id;
+        card.style.animationDelay = `${index * 60}ms`;
+
         card.innerHTML = `
           <div class="product-image">
             <img src="${product.image}" alt="${product.name}">
             <span class="product-tag">${product.category}</span>
           </div>
           <div class="product-body">
-            <h3>${product.name}</h3>
+            <h3 class="product-title">${product.name}</h3>
             <p class="product-price">${product.price}</p>
             <p class="product-desc">${product.description}</p>
             <div class="product-tags">
               ${product.tags
-                .slice(0, 4)
+                .slice(0, 3)
                 .map((tag) => `<span>${tag}</span>`)
                 .join("")}
             </div>
-            <button class="secondary-btn view-details-btn" data-id="${product.id}">
-              View Details
-            </button>
+            <div class="product-cta-text">Tap to view details & buy →</div>
           </div>
         `;
-        productsGrid.appendChild(card);
-      });
 
-      // Attach click handler to "View Details"
-      document.querySelectorAll(".view-details-btn").forEach((btn) => {
-        btn.addEventListener("click", () => {
-          const id = btn.dataset.id;
-          openProductModal(id);
+        // Poora card clickable
+        card.addEventListener("click", () => {
+          openProductModal(product.id);
         });
+
+        productsGrid.appendChild(card);
       });
     }
 
@@ -1625,7 +403,7 @@
         modalFeatures.appendChild(li);
       });
 
-      // NOTE: Yaha # ko apne original affiliate links se JS object me hi change karo.
+      // Apne affiliate links yaha set karna
       amazonLink.href = product.links.amazon || "#";
       flipkartLink.href = product.links.flipkart || "#";
       meeshoLink.href = product.links.meesho || "#";
@@ -1640,7 +418,7 @@
       document.body.classList.remove("no-scroll");
     }
 
-    // === Event Listeners ===
+    // ===== EVENTS =====
     searchInput.addEventListener("input", applyFilters);
     categoryFilter.addEventListener("change", applyFilters);
 
@@ -1656,10 +434,9 @@
       }
     });
 
-    // === Init ===
+    // ===== INIT =====
     initCategoryFilter();
     renderProducts(products);
   </script>
 </body>
 </html>
-
