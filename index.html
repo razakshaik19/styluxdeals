@@ -662,6 +662,7 @@
       @media (max-width: 768px) {
         .top-bar {
           justify-content: center; /* Mobile par logo aur header center aligned */
+          padding-inline: 0.9rem;
         }
 
         .join-links {
@@ -670,20 +671,55 @@
 
         .join-links-mobile {
           display: flex;
-          justify-content: center;
-          gap: 0.6rem;
-          padding: 0.4rem 1.1rem 0.5rem;
-          background: #020617;
-          border-bottom: 1px solid rgba(15, 23, 42, 0.9);
-          font-size: 0.78rem;
+          justify-content: space-between;
+          gap: 0.5rem;
+          padding: 0.5rem 0.9rem 0.6rem;
+          background: radial-gradient(circle at top, #020617 0, #020617 100%);
+          border-bottom: 1px solid rgba(15, 23, 42, 0.95);
+          font-size: 0.72rem;
+          box-shadow: 0 10px 30px rgba(15, 23, 42, 0.9);
         }
 
         .join-links-mobile a {
-          color: #a5b4fc;
-          text-decoration: none;
+          flex: 1 1 0;
           display: flex;
           align-items: center;
+          justify-content: center;
           gap: 0.3rem;
+          padding: 0.42rem 0.5rem;
+          border-radius: 999px;
+          text-decoration: none;
+          font-weight: 600;
+          letter-spacing: 0.12em;
+          text-transform: uppercase;
+          border: 1px solid transparent;
+          transition: transform 0.18s ease, box-shadow 0.18s ease,
+            opacity 0.18s ease;
+        }
+
+        .join-links-mobile a i {
+          font-size: 0.9rem;
+        }
+
+        .join-links-mobile a.insta-link {
+          background: linear-gradient(135deg, #f97316, #ec4899);
+          color: #f9fafb;
+        }
+
+        .join-links-mobile a.yt-link {
+          background: linear-gradient(135deg, #ef4444, #f97316);
+          color: #fef2f2;
+        }
+
+        .join-links-mobile a.tg-link {
+          background: linear-gradient(135deg, #0ea5e9, #22c55e);
+          color: #ecfeff;
+        }
+
+        .join-links-mobile a:hover {
+          transform: translateY(-1px);
+          box-shadow: 0 10px 26px rgba(15, 23, 42, 0.9);
+          opacity: 0.97;
         }
 
         .product-modal-panel {
@@ -738,6 +774,7 @@
         href="https://instagram.com/styluxdeals"
         target="_blank"
         rel="noopener"
+        class="insta-link"
       >
         <i class="fab fa-instagram"></i> Insta
       </a>
@@ -745,6 +782,7 @@
         href="https://youtube.com/@styluxdeals"
         target="_blank"
         rel="noopener"
+        class="yt-link"
       >
         <i class="fab fa-youtube"></i> YouTube
       </a>
@@ -752,6 +790,7 @@
         href="https://t.me/styluxdeals"
         target="_blank"
         rel="noopener"
+        class="tg-link"
       >
         <i class="fab fa-telegram"></i> Telegram
       </a>
