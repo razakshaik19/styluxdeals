@@ -84,30 +84,34 @@
       }
 
       .logo {
-        width: 66px;
-        height: 46px;
-        border-radius: 999px;
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
         object-fit: cover;
         border: 1px solid rgba(148, 163, 184, 0.6);
       }
 
       .brand-text {
         display: flex;
-        flex-direction: column;
-        line-height: 1.1;
+        flex-direction: row;
+        align-items: baseline;
+        gap: 0.3rem;
+        line-height: 1;
       }
 
       .brand-title {
         font-size: 1.05rem;
         letter-spacing: 0.18em;
         font-weight: 700;
+        text-transform: uppercase;
       }
 
       .brand-subtitle {
-        font-size: 0.75rem;
-        letter-spacing: 0.3em;
+        font-size: 1.05rem;
+        letter-spacing: 0.18em;
+        font-weight: 700;
         text-transform: uppercase;
-        color: var(--text-muted);
+        color: var(--text-main);
       }
 
       /* Join Links */
@@ -116,27 +120,50 @@
         gap: 0.6rem;
       }
 
-      .pill-btn {
-        padding: 0.45rem 0.9rem;
-        border-radius: 999px;
-        border: 1px solid rgba(148, 163, 184, 0.35);
-        background: linear-gradient(135deg, #020617, #020617);
-        color: var(--text-main);
-        font-size: 0.78rem;
-        text-decoration: none;
-        letter-spacing: 0.06em;
-        text-transform: uppercase;
+      .join-links a,
+      .join-links-mobile a {
+        flex: 1 1 auto;
         display: inline-flex;
         align-items: center;
         justify-content: center;
-        gap: 0.4rem;
-        transition: all 0.3s ease;
+        gap: 0.35rem;
+        padding: 0.42rem 0.9rem;
+        border-radius: 999px;
+        text-decoration: none;
+        font-weight: 600;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        border: 1px solid transparent;
+        font-size: 0.75rem;
+        transition: transform 0.18s ease, box-shadow 0.18s ease,
+          opacity 0.18s ease;
       }
 
-      .pill-btn:hover {
-        border-color: rgba(94, 234, 212, 0.7);
-        box-shadow: 0 0 0 1px rgba(94, 234, 212, 0.2);
+      .join-links a i,
+      .join-links-mobile a i {
+        font-size: 0.9rem;
+      }
+
+      .insta-link {
+        background: linear-gradient(135deg, #f97316, #ec4899);
+        color: #f9fafb;
+      }
+
+      .yt-link {
+        background: linear-gradient(135deg, #ef4444, #f97316);
+        color: #fef2f2;
+      }
+
+      .tg-link {
+        background: linear-gradient(135deg, #0ea5e9, #22c55e);
+        color: #ecfeff;
+      }
+
+      .join-links a:hover,
+      .join-links-mobile a:hover {
         transform: translateY(-1px);
+        box-shadow: 0 10px 26px rgba(15, 23, 42, 0.9);
+        opacity: 0.97;
       }
 
       /* Mobile Join Links */
@@ -665,6 +692,7 @@
           padding-inline: 0.9rem;
         }
 
+        /* Header join buttons hide on mobile, neeche wale use karo */
         .join-links {
           display: none;
         }
@@ -676,50 +704,7 @@
           padding: 0.5rem 0.9rem 0.6rem;
           background: radial-gradient(circle at top, #020617 0, #020617 100%);
           border-bottom: 1px solid rgba(15, 23, 42, 0.95);
-          font-size: 0.72rem;
           box-shadow: 0 10px 30px rgba(15, 23, 42, 0.9);
-        }
-
-        .join-links-mobile a {
-          flex: 1 1 0;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          gap: 0.3rem;
-          padding: 0.42rem 0.5rem;
-          border-radius: 999px;
-          text-decoration: none;
-          font-weight: 600;
-          letter-spacing: 0.12em;
-          text-transform: uppercase;
-          border: 1px solid transparent;
-          transition: transform 0.18s ease, box-shadow 0.18s ease,
-            opacity 0.18s ease;
-        }
-
-        .join-links-mobile a i {
-          font-size: 0.9rem;
-        }
-
-        .join-links-mobile a.insta-link {
-          background: linear-gradient(135deg, #f97316, #ec4899);
-          color: #f9fafb;
-        }
-
-        .join-links-mobile a.yt-link {
-          background: linear-gradient(135deg, #ef4444, #f97316);
-          color: #fef2f2;
-        }
-
-        .join-links-mobile a.tg-link {
-          background: linear-gradient(135deg, #0ea5e9, #22c55e);
-          color: #ecfeff;
-        }
-
-        .join-links-mobile a:hover {
-          transform: translateY(-1px);
-          box-shadow: 0 10px 26px rgba(15, 23, 42, 0.9);
-          opacity: 0.97;
         }
 
         .product-modal-panel {
@@ -745,25 +730,25 @@
           href="https://instagram.com/styluxdeals"
           target="_blank"
           rel="noopener"
-          class="pill-btn"
+          class="insta-link"
         >
-          <i class="fab fa-instagram"></i> Join Insta
+          <i class="fab fa-instagram"></i> Insta
         </a>
         <a
           href="https://youtube.com/@styluxdeals"
           target="_blank"
           rel="noopener"
-          class="pill-btn"
+          class="yt-link"
         >
-          <i class="fab fa-youtube"></i> Join YouTube
+          <i class="fab fa-youtube"></i> YouTube
         </a>
         <a
           href="https://t.me/styluxdeals"
           target="_blank"
           rel="noopener"
-          class="pill-btn"
+          class="tg-link"
         >
-          <i class="fab fa-telegram"></i> Join Telegram
+          <i class="fab fa-telegram"></i> Telegram
         </a>
       </nav>
     </header>
