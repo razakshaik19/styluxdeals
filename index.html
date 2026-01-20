@@ -633,4 +633,251 @@
         color: var(--accent);
       }
 
-      .footer-c
+      .footer-copyright {
+        font-size: 0.76rem;
+        color: var(--text-muted);
+        margin-top: 0.6rem;
+        text-align: center;
+      }
+
+      @media screen and (min-width: 640px) {
+        .products-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        .join-links-mobile {
+          display: none;
+        }
+      }
+
+      @media screen and (max-width: 639px) {
+        .join-links {
+          display: none;
+        }
+
+        .join-links-mobile {
+          display: flex;
+          flex-direction: column;
+          gap: 0.5rem;
+        }
+
+        .products-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header class="top-bar">
+      <div class="brand">
+        <img src="https://i.ibb.co/2c4Gr9g/logo.png" alt="STYLUX Logo" class="logo" />
+        <div class="brand-text">
+          <span class="brand-title">STYLUX</span>
+          <span class="brand-subtitle">DEALS</span>
+        </div>
+      </div>
+      <div class="join-links">
+        <a href="https://instagram.com" target="_blank" class="insta-link">
+          <i class="fab fa-instagram"></i> Instagram
+        </a>
+        <a href="https://youtube.com" target="_blank" class="yt-link">
+          <i class="fab fa-youtube"></i> YouTube
+        </a>
+        <a href="https://t.me" target="_blank" class="tg-link">
+          <i class="fab fa-telegram"></i> Telegram
+        </a>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <h1>Premium Deals</h1>
+        <p>Grab the best deals on gadgets, fashion, and electronics from top stores.</p>
+      </section>
+
+      <section class="search-area">
+        <div class="search-box">
+          <i class="fas fa-search search-icon"></i>
+          <input type="text" id="search-input" placeholder="Search products..." />
+        </div>
+        <select id="category-filter" class="category-select">
+          <option value="all">All Categories</option>
+          <option value="electronics">Electronics</option>
+          <option value="fashion">Fashion</option>
+          <option value="accessories">Accessories</option>
+        </select>
+      </section>
+
+      <section class="products-section">
+        <div class="section-header">
+          <h2>Featured Products</h2>
+          <p>Click on a product for more details</p>
+        </div>
+        <div class="products-grid" id="products-grid"></div>
+        <div class="no-results" id="no-results" style="display:none;">No products found.</div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <img src="https://i.ibb.co/2c4Gr9g/logo.png" alt="STYLUX Logo" class="footer-logo" />
+          <span class="footer-tagline">Curated Deals, Verified Stores</span>
+        </div>
+        <div class="footer-social">
+          <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+          <a href="https://t.me" target="_blank"><i class="fab fa-telegram"></i></a>
+        </div>
+        <div class="footer-copyright">
+          &copy; 2026 STYLUX DEALS. All rights reserved.
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      const products = [
+        {
+          id: "p1",
+          name: "URBN Men Oversized T-Shirt",
+          category: "fashion",
+          price: "₹799",
+          originalPrice: "₹1299",
+          discount: "38%",
+          limitedOffer: true,
+          offerEnds: new Date(Date.now() + 86400000 * 2),
+          shortDescription: "Premium Oversized T-Shirt for men, comfortable and stylish.",
+          description: "URBN Oversized T-Shirt made with soft cotton, breathable and perfect for casual wear.",
+          tags: ["tshirt", "men", "urbn", "oversized", "fashion"],
+          image: "https://example.com/urbn-tshirt.jpg",
+          features: [
+            "Soft Cotton",
+            "Breathable Material",
+            "Oversized Fit",
+            "Durable Stitching"
+          ],
+          stores: {
+            amazon: "https://amzn.to/urbn-tshirt",
+            flipkart: "#",
+            meesho: "#",
+            myntra: "#"
+          }
+        },
+        {
+          id: "p2",
+          name: "URBN Men Hoodie",
+          category: "fashion",
+          price: "₹1599",
+          originalPrice: "₹2299",
+          discount: "30%",
+          limitedOffer: true,
+          offerEnds: new Date(Date.now() + 86400000 * 3),
+          shortDescription: "Comfortable URBN Hoodie with premium fabric.",
+          description: "URBN Hoodie with soft inner lining, durable zipper, and modern design.",
+          tags: ["hoodie", "men", "urbn", "fashion", "premium"],
+          image: "https://example.com/urbn-hoodie.jpg",
+          features: [
+            "Soft Inner Lining",
+            "Durable Zipper",
+            "Modern Design",
+            "Premium Fabric"
+          ],
+          stores: {
+            amazon: "https://amzn.to/urbn-hoodie",
+            flipkart: "#",
+            meesho: "#",
+            myntra: "#"
+          }
+        },
+        {
+          id: "p3",
+          name: "URBN 20000mAh 35W Turbo Fast Charging Power Bank",
+          category: "electronics",
+          price: "₹2499",
+          originalPrice: "₹3999",
+          discount: "38%",
+          limitedOffer: true,
+          offerEnds: new Date(Date.now() + 86400000 * 3),
+          shortDescription:
+            "Dual Output Power Bank with PD + QC Fast Charge, compatible with MacBook Air, iPhone, Samsung, Android.",
+          description:
+            "URBN 20000mAh Power Bank offers 35W Turbo Fast Charging with dual output ports. Supports PD + QC, two-way fast charge, and pass-through charging. Ideal for MacBook Air, iPhone, Samsung, and other Android devices.",
+          tags: ["powerbank", "urbn", "fast charge", "pd", "qc", "portable"],
+          image:
+            "https://example.com/urbn-powerbank.jpg",
+          features: [
+            "35W Turbo Fast Charging",
+            "Dual Output Ports",
+            "PD + QC Compatible",
+            "Two-Way Fast Charge",
+            "Pass-Through Charging",
+            "Compatible with MacBook Air, iPhone, Samsung, Android"
+          ],
+          stores: {
+            amazon: "https://amzn.to/your-affiliate-link",
+            flipkart: "#",
+            meesho: "#",
+            myntra: "#"
+          }
+        }
+      ];
+
+      const productsGrid = document.getElementById("products-grid");
+      const noResults = document.getElementById("no-results");
+      const searchInput = document.getElementById("search-input");
+      const categoryFilter = document.getElementById("category-filter");
+
+      function renderProducts(list) {
+        productsGrid.innerHTML = "";
+        if (list.length === 0) {
+          noResults.style.display = "block";
+          return;
+        } else {
+          noResults.style.display = "none";
+        }
+
+        list.forEach((product) => {
+          const card = document.createElement("div");
+          card.className = "product-card";
+          card.innerHTML = `
+            <div class="product-image-wrap">
+              <img src="${product.image}" alt="${product.name}" />
+            </div>
+            <div class="product-body">
+              <h3>${product.name}</h3>
+              <div class="discount-price">
+                <div class="price-container">
+                  <span class="original-price">${product.originalPrice}</span>
+                  <span class="discount-badge">${product.discount}</span>
+                </div>
+                <div class="current-price">${product.price}</div>
+              </div>
+              ${product.limitedOffer ? `<div class="limited-offer"><i class="fas fa-clock"></i> Limited Offer</div>` : ""}
+              <p class="product-desc">${product.shortDescription}</p>
+            </div>
+          `;
+          productsGrid.appendChild(card);
+        });
+      }
+
+      function filterProducts() {
+        const searchTerm = searchInput.value.toLowerCase();
+        const category = categoryFilter.value;
+        const filtered = products.filter((product) => {
+          const matchCategory = category === "all" || product.category === category;
+          const matchSearch =
+            product.name.toLowerCase().includes(searchTerm) ||
+            product.tags.some((tag) => tag.toLowerCase().includes(searchTerm));
+          return matchCategory && matchSearch;
+        });
+        renderProducts(filtered);
+      }
+
+      searchInput.addEventListener("input", filterProducts);
+      categoryFilter.addEventListener("change", filterProducts);
+
+      renderProducts(products);
+    </script>
+  </body>
+</html>
